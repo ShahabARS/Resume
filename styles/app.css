@@ -1,0 +1,47 @@
+:root {
+  --VazirFont: "Vazirmatn", sans-serif, arial, helvetica;
+}
+
+body {
+  font-family: "Vazirmatn", sans-serif, arial, helvetica;
+  font-optical-sizing: auto;
+  font-style: normal;
+  aspect-ratio: 9 / 16;
+}
+
+.flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.resume__container {
+  
+}
+
+.resume__profile {
+}
+
+.header__title {
+}
+
+.resume__wrapper {
+}
+
+.resume__name {
+}
+
+.resume__lastname {
+}
+
+.resume__field {
+}
+
+.resume__list {
+}
+
+.resume-list__item {
+}
+
+.resume__description {
+}
