@@ -1,9 +1,11 @@
 :root {
   --VazirFont: "Vazirmatn", sans-serif, arial, helvetica;
+  --MozillaFont: "Mozilla Text", sans-serif, arial, helvetica;
+  --EduNSWACTFont: "Edu NSW ACT Cursive", sans-serif, arial, helvetica;
 }
 
 body {
-  font-family: "Vazirmatn", sans-serif, arial, helvetica;
+  font-family: var(--MozillaFont);
   font-optical-sizing: auto;
   font-style: normal;
   aspect-ratio: 9 / 16;
