@@ -1,22 +1,121 @@
-:root {
-  
-  --ArtyClick-Cool-Red: #fe043c;
-  --Very-Light-Pink: #fff5ec;
-  --White: #fff;
-  --Meteorite: #2e266f;
-  --Smokey-Grey: #707070;
+@media (min-width: 390px) {
+  .resume-header__line {
+    top: 13.25rem;
+  }
+
+  .resume-profile__img {
+    height: 32rem;
+  }
 }
 
-@media (min-width: 320px) {
+@media (min-width: 420px) {
+  .resume-header__line {
+    top: 15.6rem;
+  }
+
+  .resume-profile__img {
+    height: 37rem;
+  }
+}
+
+@media (min-width: 480px) {
+  .resume-header__line {
+    top: 16rem;
+  }
+
+  .resume-profile-info {
+    height: 26rem;
+    padding-left: 3rem;
+  }
+
+  .resume-profile-info__name {
+    font-size: 5rem;
+  }
+
+  .resume-profile-info__filed {
+    font-size: 3rem;
+  }
+
+  .resume-profile-info__list {
+    font-size: 1.7rem;
+  }
+}
+
+@media (min-width: 520px) {
+  .resume-profile__img {
+    margin-left: 4rem;
+  }
+
+  .resume-profile__texts {
+    width: 2rem;
+    left: 0.8rem;
+    flex-direction: column-reverse;
+    height: 2rem;
+  }
+
+  .resume-profile__text {
+    transform: rotateZ(-90deg) translateZ(0);
+    font-size: 4.6rem;
+    line-height: 2rem;
+  }
+
+  .resume-profile-info {
+    padding-left: 3rem;
+  }
 }
 
 @media (min-width: 576px) {
 }
 
 @media (min-width: 768px) {
+  p {
+    font-size: 1.8rem;
+  }
+
+  .resume-header__line {
+    top: 18.5rem;
+    height: 7rem;
+  }
+
+  .resume-profile-info {
+    gap: 2rem;
+  }
+
+  .resume-profile__texts {
+    transform: translate(0%, 120%) translateZ(0);
+  }
+
+  .resume-profile-info__name {
+    font-size: 7rem;
+  }
+  .resume-profile-info__filed {
+    font-size: 5rem;
+  }
+
+  .resume-profile-info__list {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 1rem;
+  }
+
+  .resume-profile-info__item {
+    font-size: 1.8rem;
+    padding-left: 1rem;
+    border-left: solid 0.2rem var(--Dark);
+  }
 }
 
 @media (min-width: 992px) {
+  .resume-header__line {
+    top: 19.3rem;
+  }
+
+  .resume-profile-info__item:first-child {
+    border-left: none;
+    padding-left: 0;
+  }
 }
 
 @media (min-width: 1200px) {

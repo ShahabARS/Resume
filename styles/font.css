@@ -4,11 +4,31 @@
 }
 
 @font-face {
-  font-family: "Mozilla Text";
-  src: url(../fonts/MozillaText-VariableFont_wght.ttf) format("truetype");
+  font-family: "Oswald";
+  src: url(../fonts/Oswald-VariableFont_wght.ttf) format("truetype");
 }
 
 @font-face {
-  font-family: "Edu NSW ACT Cursive";
-  src: url(../fonts/EduNSWACTCursive-VariableFont_wght.ttf) format("truetype");
+  font-family: "Barlow-ExtraLight";
+  src: url(../fonts/BarlowCondensed-ExtraLight.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Barlow-Light";
+  src: url(../fonts/BarlowCondensed-Light.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Barlow-Regular";
+  src: url(../fonts/BarlowCondensed-Regular.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Barlow-Medium";
+  src: url(../fonts/BarlowCondensed-Medium.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Barlow-Bold";
+  src: url(../fonts/BarlowCondensed-Bold.ttf) format("truetype");
 }

@@ -1,49 +1,130 @@
 :root {
   --VazirFont: "Vazirmatn", sans-serif, arial, helvetica;
-  --MozillaFont: "Mozilla Text", sans-serif, arial, helvetica;
-  --EduNSWACTFont: "Edu NSW ACT Cursive", sans-serif, arial, helvetica;
+  --OswaldFont: "Oswald", sans-serif, arial, helvetica;
+  --BarlowExtraLightFont: "Barlow-ExtraLight", sans-serif, arial, helvetica;
+  --BarlowLightFont: "Barlow-Light", sans-serif, arial, helvetica;
+  --BarlowRegularFont: "Barlow-Regular", sans-serif, arial, helvetica;
+  --BarlowMediumFont: "Barlow-Medium", sans-serif, arial, helvetica;
+  --BarlowBoldFont: "Barlow-Bold", sans-serif, arial, helvetica;
+  --Lime: #cbe601;
+  --White: #f5f5f5;
+  --BgBody: #fff;
+  --Dark: #111;
 }
 
 body {
-  font-family: var(--MozillaFont);
+  font-family: var(--OswaldFont);
   font-optical-sizing: auto;
   font-style: normal;
-  aspect-ratio: 9 / 16;
+  background-color: var(--BgBody);
 }
 
-.flex-center {
+.resume-header {
+  position: relative;
+  min-width: 100%;
+}
+
+.resume-header__line {
+  position: absolute;
+  top: 7.3rem;
+  left: 0;
+  min-width: 100%;
+  height: 5rem;
+  background-color: var(--Lime);
+}
+
+.resume-header-container {
+  position: relative;
+}
+
+.resume-header-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.3rem;
+  height: 100%;
+  background-color: var(--Dark);
+}
+
+.resume-profile {
+  position: relative;
+}
+
+.resume-profile__img {
+  display: block;
+  aspect-ratio: 9/16;
+  width: auto;
+  height: 20rem;
+  background-color: #00000069;
+}
+
+.resume-profile__texts {
+  position: absolute;
+  top: 50%;
+  left: -1.1rem;
+  transform: translate(0%, -50%) translateZ(0);
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 
-.resume__container {
-  
+.resume-profile__text {
+  font-size: 2rem;
+  font-family: var(--BarlowMediumFont);
 }
 
-.resume__profile {
+.resume-header-container__wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.header__title {
+.resume-profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: fit-content;
+  height: 20rem;
+  padding-left: 1rem;
+  width: 100%;
 }
 
-.resume__wrapper {
-}
-
-.resume__name {
+.resume-profile-info__name {
+  font-size: 4rem;
+  font-weight: 200;
+  width: 100%;
 }
 
 .resume__lastname {
+  font-weight: 400;
 }
 
-.resume__field {
+.resume-profile-info__filed {
+  font-size: 2.6rem;
+  font-family: var(--BarlowLightFont);
+  width: 100%;
 }
 
-.resume__list {
+.resume-profile-info__list {
+  display: flex;
+  flex-direction: column;
+  align-items: baseline;
+  justify-content: flex-start;
+  width: 100%;
 }
 
-.resume-list__item {
+.resume-profile-info__item {
 }
 
-.resume__description {
+.resume-profile-info__description {
+  text-indent: 1rem;
+  margin-top: 2rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: solid 2rem var(--Lime);
 }

@@ -4,40 +4,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description"
+        content="Shahab Arshi - Frontend Developer Resume. Computer Engineering student with expertise in HTML, CSS, and JavaScript.">
+    <meta name="keywords"
+        content="Frontend Developer, Web Design, HTML, CSS, JavaScript, Resume, Portfolio, Computer Engineering">
     <link rel="stylesheet" href="./styles/reset.css">
     <link rel="stylesheet" href="./styles/font.css">
     <link rel="stylesheet" href="./styles/grid.css">
     <link rel="stylesheet" href="./styles/app.css">
     <link rel="stylesheet" href="./styles/responsive.css">
-    <link rel="shortcut icon" href="./images/site-icon.ico" type="image/x-icon">`
+    <link rel="shortcut icon" href="./images/icon/moon.ico" type="image/x-icon">
     <title>ARS Resume</title>
 </head>
 
 <body>
-    <header class="header">
+    <header class="resume-header">
+        <div class="resume-header__line"></div>
         <div class="container">
-            <div class="resume__container flex-center">
-                <div class="resume__profile">
-                    <h1 class="header__title">Resume</h1>
-                    <div class="resume__picture"></div>
+            <div class="resume-header-container">
+                <div class="resume-header-container__wrapper">
+                    <div class="resume-profile">
+                        <img class="resume-profile__img" src="./images/2.png" alt="profile picture" width="100%"
+                            height="100%">
+                        <ul class="resume-profile__texts">
+                            <li class="resume-profile__text">R</li>
+                            <li class="resume-profile__text">E</li>
+                            <li class="resume-profile__text">S</li>
+                            <li class="resume-profile__text">U</li>
+                            <li class="resume-profile__text">M</li>
+                            <li class="resume-profile__text">E</li>
+                        </ul>
+                    </div>
+                    <div class="resume-profile-info">
+                        <strong class="resume-profile-info__name">Shahab <span class="resume__lastname">Arshi</span>
+                        </strong>
+                        <div class="resume-profile-info__filed">Frontend Developer</div>
+                        <ul class="resume-profile-info__list">
+                            <li class="resume-profile-info__item">E: Shahab.ars.7@gmail.com</li>
+                            <li class="resume-profile-info__item">P: +98 938 753 4999</li>
+                            <li class="resume-profile-info__item">A: Iran, Karaj/Alborz</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="resume__wrapper">
-                    <strong class="resume__name">Shahab <span class="resume__lastname">Arshi</span></strong>
-                    <div class="resume__field">FrontEnd Developer</div>
-                    <ul class="resume-list">
-                        <li class="resume-list__item">E: <a href="shahab.ars.7@gmail.com">Shahab.ars.7@gmail.com</a>
-                        </li>
-                        <li class="resume-list__item">P: +938 753 4999</li>
-                        <li class="resume-list__item">A: Iran, Karaj/Alborz</li>
-                    </ul>
-                </div>
+                <p class="resume-profile-info__description">
+                    I am Shahab Arshi, a 21-year-old Computer Engineering (Software) student from Karaj with a strong
+                    foundation in web design. I possess solid expertise in HTML, CSS, and responsive page development,
+                    along with intermediate JavaScript skills that I am actively enhancing. Passionate about continuous
+                    learning, teamwork, and tackling new challenges, I am committed to expanding my technical abilities
+                    and advancing my professional growth. While my résumé is still evolving, I am dedicated to acquiring
+                    new skills and consistently improving my qualifications. I value your time in reviewing my profile
+                    and look forward to future opportunities.
+                </p>
             </div>
-            <p class="resume__description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ipsa vel repellat
-                molestias qui harum eos nesciunt fugiat amet ipsam ut. Ab cupiditate temporibus dolorum doloribus a
-                voluptas voluptatem sapiente placeat.</p>
         </div>
     </header>
-
     <script src="./scripts/app.js" defer></script>
 </body>
 
