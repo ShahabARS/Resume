@@ -8,7 +8,7 @@
   --BarlowBoldFont: "Barlow-Bold", sans-serif, arial, helvetica;
   --Lime: #cbe601;
   --White: #f5f5f5;
-  --BgBody: #fff;
+  --BgBody: #e8e6e9;
   --Dark: #111;
 }
 
@@ -127,4 +127,85 @@ body {
   margin-left: 1rem;
   padding-left: 1rem;
   border-left: solid 2rem var(--Lime);
+}
+
+/* 
+// Main Content //
+*/
+
+.main {
+  margin-top: 2rem;
+}
+
+.skills-education {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.skills-education__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.skills-education__titles {
+  font-weight: 300;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.skills__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-direction: column;
+  font-size: 2rem;
+  font-family: var(--BarlowLightFont);
+  width: 100%;
+}
+
+.skills-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-width: 100%;
+}
+
+.skills-item__title {
+}
+
+.skills-item__progress {
+  position: relative;
+  height: 0.6rem;
+  min-width: 8rem;
+  background-color: #bebbbf;
+  border-radius: 0.1rem;
+}
+
+.skills-item__progress--deactive {
+  display: none;
+}
+
+.skills-item__progress::after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  height: 0.6rem;
+  width: var(--skill-level, 0%);
+  background-color: var(--Lime);
+  box-shadow: inset 0px 0px 5px 0px #00000025;
+  border-radius: 0.2rem;
+}
+
+.skills-item__inprogress {
+  display: none;
+  color: #cbe601;
+  text-shadow: 0.1rem 0.1rem 0 #00000025;
 }

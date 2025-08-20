@@ -69,6 +69,7 @@ ul {
 }
 
 .row > * {
+  margin-inline: auto;
   margin-bottom: 1.78rem;
 }
 
