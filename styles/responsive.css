@@ -113,6 +113,12 @@
   .skills-education__wrapper {
     flex-basis: 50%;
   }
+
+  .portfolio__list {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+  }
 }
 
 @media (min-width: 992px) {
@@ -127,10 +133,17 @@
 
   .skills-education {
     flex-direction: column;
+    justify-content: space-around;
+    gap: none;
+    min-height: 100%;
   }
 
   .skills-education__wrapper {
     flex-basis: none;
+  }
+
+  .experience-portfolio {
+    padding-left: 8rem;
   }
 }
 
@@ -138,4 +151,9 @@
 }
 
 @media (min-width: 1400px) {
+  .portfolio__list {
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    gap: 3rem;
+  }
 }

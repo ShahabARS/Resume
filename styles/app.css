@@ -265,3 +265,116 @@ body {
   font-size: 2rem;
   font-family: var(--BarlowLightFont);
 }
+
+.experience-portfolio {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.experience-portfolio__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.experience__list {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-direction: column;
+  width: 100%;
+}
+
+.experience-item {
+  padding-left: 2rem;
+  border-left: solid 1rem var(--Lime);
+}
+
+.experience-item__date {
+  font-size: 2.2rem;
+  color: var(--DarkGray);
+}
+
+.experience-item__decription {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  text-indent: 1rem;
+}
+
+.portfolio-container {
+}
+
+.resume-section__caption {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  text-indent: 1rem;
+}
+
+.portfolio__list {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 0rem;
+  grid-row-gap: 2rem;
+}
+
+.portfolio-item {
+}
+
+.portfolio-item__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding-bottom: 2rem;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: var(--Lime);
+  transition: all 0.3s ease-in-out;
+}
+
+.portfolio-item__link:hover {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  transform: scale(1.05) translateZ(0);
+  background-color: var(--White);
+}
+
+.portfolio-item__link:hover .portfolio-item__img {
+  filter: grayscale(0%);
+}
+
+.portfolio-item__link:visited {
+  background-color: var(--White) !important;
+}
+
+.portfolio-item__link:visited .portfolio-item__img {
+  filter: grayscale(0%) !important;
+}
+
+.portfolio-item__img {
+  object-fit: cover;
+  aspect-ratio: 5/4;
+  filter: grayscale(100%);
+  transition: filter 0.3s ease;
+}
+
+.portfolio-item__caption {
+  font-family: var(--BarlowMediumFont);
+  font-size: 2rem;
+  color: var(--Dark);
+  text-align: center;
+}
+
+.portfolio-item__comingsoon {
+  font-family: var(--BarlowMediumFont);
+  font-size: 1.6rem;
+  color: var(--DarkGray);
+  text-align: center;
+}

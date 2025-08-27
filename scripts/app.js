@@ -1,6 +1,7 @@
 "use strict";
 
 const progressBars = document.querySelectorAll(".skills-item__progress");
+const portfolioLinks = document.querySelectorAll(".portfolio-item__link")[3];
 
 progressBars.forEach((item) => {
   const level = parseInt(item.getAttribute("skill-level"), 10);
@@ -10,4 +11,8 @@ progressBars.forEach((item) => {
   } else {
     item.style.setProperty("--progress-color", "#cbe601");
   }
+});
+
+portfolioLinks.addEventListener("click", (e) => {
+  e.preventDefault();
 });
