@@ -105,6 +105,14 @@
     padding-left: 1rem;
     border-left: solid 0.2rem var(--Dark);
   }
+
+  .skills-education {
+    flex-wrap: nowrap;
+  }
+
+  .skills-education__wrapper {
+    flex-basis: 50%;
+  }
 }
 
 @media (min-width: 992px) {
@@ -115,6 +123,14 @@
   .resume-profile-info__item:first-child {
     border-left: none;
     padding-left: 0;
+  }
+
+  .skills-education {
+    flex-direction: column;
+  }
+
+  .skills-education__wrapper {
+    flex-basis: none;
   }
 }
 

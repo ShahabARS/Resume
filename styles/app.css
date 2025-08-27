@@ -8,6 +8,7 @@
   --BarlowBoldFont: "Barlow-Bold", sans-serif, arial, helvetica;
   --Lime: #cbe601;
   --White: #f5f5f5;
+  --DarkGray: #79797b;
   --BgBody: #e8e6e9;
   --Dark: #111;
 }
@@ -142,6 +143,7 @@ body {
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .skills-education__wrapper {
@@ -152,7 +154,7 @@ body {
   width: 100%;
 }
 
-.skills-education__titles {
+.resume-section__titles {
   font-weight: 300;
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -162,8 +164,9 @@ body {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
+  gap: 1rem;
   flex-direction: column;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-family: var(--BarlowLightFont);
   width: 100%;
 }
@@ -181,9 +184,10 @@ body {
 .skills-item__progress {
   position: relative;
   height: 0.6rem;
-  min-width: 8rem;
-  background-color: #bebbbf;
+  min-width: 12rem;
+  background-color: #cecece;
   border-radius: 0.1rem;
+  overflow: hidden;
 }
 
 .skills-item__progress--deactive {
@@ -194,18 +198,70 @@ body {
   content: "";
   position: absolute;
   display: block;
-  top: 50%;
+  top: 0;
   left: 0;
-  transform: translateY(-50%);
   height: 0.6rem;
   width: var(--skill-level, 0%);
-  background-color: var(--Lime);
-  box-shadow: inset 0px 0px 5px 0px #00000025;
+  background-color: var(--progress-color);
   border-radius: 0.2rem;
+  box-shadow: inset 0px 0px 3px 0px #00000017;
 }
 
-.skills-item__inprogress {
-  display: none;
-  color: #cbe601;
-  text-shadow: 0.1rem 0.1rem 0 #00000025;
+.education__list {
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 3rem;
+  flex-direction: column;
+  width: 100%;
+  min-height: 37rem;
+}
+
+.education__list::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0.3rem;
+  height: 100%;
+  background-color: var(--Dark);
+}
+
+.education-item {
+  position: relative;
+  padding-left: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.education-item::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -0.4rem;
+  transform: translateY(-50%);
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background-color: var(--Dark);
+}
+
+.education-item__date {
+  font-size: 2.2rem;
+  color: var(--DarkGray);
+  font-family: var(--BarlowMediumFont);
+}
+
+.education-item__collage {
+  font-size: 2.2rem;
+  font-weight: 400;
+}
+
+.education-item__field {
+  font-size: 2rem;
+  font-family: var(--BarlowLightFont);
 }
