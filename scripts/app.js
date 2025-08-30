@@ -59,11 +59,11 @@ const resources = {
   },
   fa: {
     textBtn: "En",
-    r: "ر",
-    e: "ز",
+    r: "ه",
+    e: "م",
     s: "و",
-    u: "م",
-    m: "ه",
+    u: "ز",
+    m: "ر",
     e2: "",
     name: "شهاب",
     lastname: "عرشی",
@@ -74,13 +74,13 @@ const resources = {
     profileDescription:
       "من شهاب عرشی هستم، دانشجوی ۲۱ ساله‌ی مهندسی کامپیوتر (نرم‌افزار) از کرج با پایه‌ای قوی در طراحی وب. در زمینه‌ی HTML، CSS و توسعه صفحات واکنش‌گرا تخصص خوبی دارم و همچنین مهارت‌های متوسطی در جاوااسکریپت دارم که به طور فعال در حال تقویت آن‌ها هستم. علاقه‌مند به یادگیری مستمر، کار تیمی و مواجهه با چالش‌های جدید هستم و متعهد به گسترش توانایی‌های فنی و پیشرفت حرفه‌ای خود می‌باشم. هرچند رزومه‌ی من همچنان در حال تکمیل است، اما در مسیر کسب مهارت‌های جدید و ارتقای مداوم شایستگی‌هایم تلاش می‌کنم. از وقتی که برای بررسی پروفایل من می‌گذارید قدردانی می‌کنم و منتظر فرصت‌های آینده هستم.",
     education: "تحصیلات",
-    educationFirstItemData: "۱۳۹۸ - ۱۴۰۱",
+    educationFirstItemDate: "۱۳۹۸ - ۱۴۰۱",
     educationFirstItemPlace: "کرج، هنرستان امام خمینی",
     educationFirstItemField: "تعمیرات تلفن همراه",
-    educationSecondItemData: "۱۴۰۱ - ۱۴۰۳",
+    educationSecondItemDate: "۱۴۰۱ - ۱۴۰۳",
     educationSecondItemPlace: "کرج، علمی کاربردی جهاد دانشگاهی",
     educationSecondItemField: "مهندسی کامپیوتر - نرم‌افزار",
-    educationThirdItemData: "۱۴۰۳ - درحال تحصیل",
+    educationThirdItemDate: "۱۴۰۳ - درحال تحصیل",
     educationThirdItemPlace: "تهران دانشگاه علم و فرهنگ",
     educationThirdItemField: "مهندسی کامپیوتر - نرم‌افزار",
     skills: "مهارت ها",
@@ -89,7 +89,7 @@ const resources = {
     experienceDecription:
       "تا الان به صورت رسمی به عنوان برنامه‌نویس استخدام نشده‌ام، اما چند ماه در یک فروشگاه لپ‌تاپ به عنوان فروشنده فعالیت کرده‌ام و در کنار فروش لپ‌تاپ و لوازم جانبی، خدمات نرم‌افزاری مانند نصب ویندوز و ابزارهای موردنیاز مشتریان را نیز ارائه داده‌ام. در حال حاضر شاغل نیستم و بیشتر پروژه‌های دانشگاهی دانشجویان را انجام می‌دهم. به دنبال فرصت استخدام رسمی به عنوان برنامه‌نویس جونیور هستم تا در یک محیط گسترده‌تر و در قالب کار تیمی، تجربه بیشتری در حوزه برنامه‌نویسی به دست بیاورم.",
     portfolio: "نمونه کار",
-    porfolioCaption: "پروفایل گیت هاب من",
+    porfolioCaption: "پروفایل من در گیت هاب",
     portfolioFirstItem: "پروتوتایپ وبسایت کمپ",
     portfolioSecondItem: "پروتوتایپ سایت ان‌اف‌تی",
     portfolioThirdItem: "سایت شخصی",
@@ -101,3 +101,38 @@ const resources = {
 const defaultLang = localStorage.getItem("lang") || "en";
 const htmlEl = document.documentElement;
 const toggleBtn = document.getElementById("resume-lang__btn");
+
+function applyLanguage(lang) {
+  const nodes = document.querySelectorAll("[data-translate]");
+  nodes.forEach((node) => {
+    const key = node.getAttribute("data-translate");
+    const text = resources[lang] && resources[lang][key];
+    if (text !== undefined) {
+      node.innerText = text;
+    }
+  });
+
+  if (lang === "fa") {
+    htmlEl.setAttribute("lang", "fa-IR");
+    htmlEl.dir = "rtl";
+  } else {
+    htmlEl.setAttribute("lang", "en");
+    htmlEl.dir = "ltr";
+  }
+  if (lang === "fa") {
+    toggleBtn.innerText = "EN";
+  } else {
+    toggleBtn.innerText = "فا";
+  }
+  localStorage.setItem("lang", lang);
+}
+
+function toggleLanguage() {
+  const current = localStorage.getItem("lang") || "en";
+  const next = current === "en" ? "fa" : "en";
+  applyLanguage(next);
+}
+
+toggleBtn.addEventListener("click", toggleLanguage);
+
+applyLanguage(defaultLang);

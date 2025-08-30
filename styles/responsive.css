@@ -28,7 +28,7 @@
     padding-left: 3rem;
   }
 
-  .resume-profile-info__name {
+  .resume-profile-info__username {
     font-size: 5rem;
   }
 
@@ -51,6 +51,11 @@
     left: 0.8rem;
     flex-direction: column-reverse;
     height: 2rem;
+  }
+
+  .resume-profile__texts--right {
+    left: unset;
+    right: 0.8rem;
   }
 
   .resume-profile__text {
@@ -85,9 +90,10 @@
     transform: translate(0%, 120%) translateZ(0);
   }
 
-  .resume-profile-info__name {
+  .resume-profile-info__username {
     font-size: 7rem;
   }
+
   .resume-profile-info__filed {
     font-size: 5rem;
   }
@@ -144,6 +150,11 @@
 
   .experience-portfolio {
     padding-left: 8rem;
+  }
+
+  html[lang="fa-IR"] .experience-portfolio {
+    padding-left: 0;
+    padding-right: 8rem;
   }
 }
 
