@@ -1,1 +1,3 @@
 # Resume
+I am Shahab Arshi, a 21-year-old Computer Engineering (Software) student from Karaj with a strong foundation in web design. I possess solid expertise in HTML, CSS, and responsive page development, along with intermediate JavaScript skills that I am actively enhancing. Passionate about continuous learning, teamwork, and tackling new challenges, I am committed to expanding my technical abilities and advancing my professional growth. While my résumé is still evolving, I am dedicated to acquiring new skills and consistently improving my qualifications. I value your time in reviewing my profile and look forward to future opportunities.
+https://shahabars.github.io/Resume/
